@@ -1,7 +1,7 @@
-hello_world-formula
+filebeat-formula
 ================
 
-This is an example Xentaurs workshop project for SaltStack, Vagrant, and ServerSpec integration
+This is the filebeat formula for Elastic
 
 Available states
 ================
@@ -17,7 +17,7 @@ Available states
 .. contents::
     :local:
 
-``hello_world``
+``filebeat``
 -------------
 
-Installs the apache2 package, manages the index page, and starts the apache2 service. 
+Installs the filebeat package, manages the configuration, and the service
