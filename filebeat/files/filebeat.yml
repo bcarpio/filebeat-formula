@@ -1,0 +1,9 @@
+filebeat.prospectors:
+- input_type: log
+  paths:
+    - /var/log/*.log
+output.elasticsearch:
+{% set eshosts = salt['mine.get']('G@appname:metricsdb and G@roles:elasticsearch', 'network.ip_addrs', 'compound') %}
+  hosts: [ "{{ eshosts|join('", "') }}:9200" ]
+  username: "{{ username }}"
+  password: "{{ password }}"
